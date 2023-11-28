@@ -13,17 +13,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Optional: Bootstrap Icons (if needed) -->
+    <link rel="stylesheet" href="{{ asset('app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
+
 <body>
+
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class=" header-menu navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                {{-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
+                </a> --}}
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -75,11 +78,51 @@
                 </div>
             </div>
         </nav>
+        {{-- <div class="header-menu">
 
-        <main class="py-4">
+            <div class="row justify-content-center">
+                <div class="">
+                    <div class="d-flex justify-content-center">
+
+                        @yield('title')
+
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+        <div class="py-4">
             @yield('content')
-        </main>
+        </div>
+        <div class="bottom-menu">
+
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <div class="d-flex justify-content-between">
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0">Home</p>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0">Home</p>
+                        </a>
+                        <a href="">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mb-0">Home</p>
+                        </a>
+
+
+                        <a href=""><i class="fa-solid fa-house"></i>
+                            <p class="mb-0">Home</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
