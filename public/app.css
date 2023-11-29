@@ -24,7 +24,6 @@
     text-transform: uppercase;
 }
 
-/* Side bar */
 @keyframes swing {
     0% {
         transform: rotate(0deg);
